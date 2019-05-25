@@ -1,7 +1,9 @@
 syntax = "proto2";
 package com.lc.test;
 option optimize_for = SPEED;
+//包名
 option java_package = "com.lc.test";
+//外层包名
 option java_outer_classname = "DataInfo";
 
 message MyMessage{
@@ -10,8 +12,10 @@ enum DataType{
     DogType = 2;
     CatType = 3;
 }
+//这个一定要传输过程中
 required DataType data_type = 1;
 oneof dataBody{
+    //其中一种的意思
     Student student = 2;
     Dog dog = 3;
     Cat cat = 4;
